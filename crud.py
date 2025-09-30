@@ -15,4 +15,18 @@ def listar_alunos(nome, idade):
             cursor.close()
             conexao.close()
 
+def atualizar_alunos(id_aluno, nova_idade):
+    conexao, cursor = conectar()
+    if conexao:
+        try:
+            cursor.execute(
+                "UPDATE alunos SET idade = %s WHERE id %s",
+                (nova_idade, id_aluno)
+            )
+        except Exception as erro:
+            print(f'erro ao atualizar um aluno: {erro}')
+        finally:
+            cursor.close()
+            conexao.close()
+            
 
