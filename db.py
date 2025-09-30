@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 import os 
 
 # carregar minhas variaveis do .env 
+load_dotenv()
+
 params = {
     'dbname': os.getenv("DB_NAME"),
     'user': os.getenv("DB_USER"),
