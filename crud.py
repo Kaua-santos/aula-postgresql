@@ -1,6 +1,6 @@
 from db import conectar 
 
-def criar_aluno(nome, idade):
+def listar_alunos(nome, idade):
     conexao, cursor = conectar()
     if conexao:
         try:
