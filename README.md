@@ -1,9 +1,11 @@
 # CRUD COM POSTGRESQL + PYTHON
 
-Este projeto é um exemplo prático de CRUD usando:
-- Banco de dados  **PostgreSQL**
-- Conexão com **psycopg2**
-- Interface web com **Streamlit**
+| Tecnologia   | Descrição                         |
+|--------------|----------------------------------|
+| PostgreSQL   | Banco de dados relacional         |
+| psycopg2     | Driver para conexão com PostgreSQL |
+| Streamlit    | Framework web para aplicações rápidas |
+| Python       | Linguagem de programação          |
 
 ## Como executar
 
