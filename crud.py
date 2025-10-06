@@ -15,16 +15,14 @@ def criar_aluno(nome, idade):
             cursor.close()
             conexao.close()
 
-criar_aluno("Kaua santos", 17)
-
-def listar_aluno(nome, idade):
+def listar_aluno():
     conexao, cursor = conectar()
     if conexao:
         try:
             cursor.execute(
                 "SELECT * FROM alunos ORDER BY id"
             )
-            conexao.commit()
+            return cursor.fetchall()
         except Exception as erro:
             print(f"Erro ao listar {erro}")
             return[]
@@ -41,6 +39,7 @@ def atualizar_alunos(id_aluno, nova_idade):
                 "UPDATE alunos SET idade= %s WHERE id = %s",
                 (nova_idade, id_aluno)
             )
+            conexao.commit()
         except Exception as erro:
             print(f"Erro ao atualizar um aluno:  {erro}")
         finally:
